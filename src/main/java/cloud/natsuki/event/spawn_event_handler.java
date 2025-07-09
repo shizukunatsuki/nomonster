@@ -17,7 +17,7 @@ public class spawn_event_handler {
 
     private static final Logger LOGGER = LogManager.getLogger("NoMonster");
 
-    // --- 新增：用于控制详细日志输出的开关 ---
+    // --- 用于控制详细日志输出的开关 ---
     // 设置为 false: 在生产环境中运行时，不会打印任何怪物被阻止的日志，保持后台干净。
     // 设置为 true: 在需要调试范围问题时，会打印详细的诊断日志。
     private static final boolean enable_detailed_logging = false;
@@ -37,7 +37,7 @@ public class spawn_event_handler {
             // 核心功能：取消事件，阻止怪物生成
             event.setCanceled(true);
 
-            // --- 核心修改：只有在开关打开时才执行日志记录 ---
+            // --- 只有在开关打开时才执行日志记录 ---
             if (enable_detailed_logging) {
                 nomonster_zone zone = matching_zone_opt.get();
 

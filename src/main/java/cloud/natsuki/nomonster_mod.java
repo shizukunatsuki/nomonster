@@ -8,7 +8,6 @@ import net.minecraftforge.fml.common.Mod;
 @Mod("nomonster")
 public class nomonster_mod {
 
-    // 构造函数也遵循命名规范
     public nomonster_mod() {
         MinecraftForge.EVENT_BUS.register(spawn_event_handler.class);
         MinecraftForge.EVENT_BUS.register(server_lifecycle_events.class);
