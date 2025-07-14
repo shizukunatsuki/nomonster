@@ -30,7 +30,6 @@ public class nomonster_commands {
                 .then(Commands.argument("name", StringArgumentType.word())
                         .then(Commands.argument("center", BlockPosArgument.blockPos())
                                 .then(Commands.argument("range", DoubleArgumentType.doubleArg(0.1))
-                                        // 方法引用已修改
                                         .executes(nomonster_commands::execute_add))));
     }
 
